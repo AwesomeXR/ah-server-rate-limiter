@@ -1,0 +1,29 @@
+{
+  "name": "ah-server-rate-limiter",
+  "version": "1.1.9",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "scripts": {
+    "ci": "prettier --check src && tsc -p tsconfig.json --noEmit",
+    "build": "tsc -p tsconfig.build.json --outDir dist",
+    "release": "npm run ci && npm run build && rm -rf dist/* && npm run build && release-it"
+  },
+  "peerDependencies": {
+    "ah-server": ">5.2.4"
+  },
+  "devDependencies": {
+    "ah-server": "^5.2.4",
+    "prettier": "^3.2.3",
+    "release-it": "^17.0.1",
+    "typescript": "^4.2.4"
+  },
+  "dependencies": {
+    "ioredis": "^5.2.3",
+    "rate-limiter-flexible": "^2.3.1"
+  }
+}
