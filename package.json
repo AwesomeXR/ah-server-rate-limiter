@@ -1,6 +1,6 @@
 {
   "name": "ah-server-rate-limiter",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "main": "dist/index.js",
   "files": [
     "dist"
